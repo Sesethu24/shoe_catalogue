@@ -48,7 +48,7 @@ function shoeCatalogue() {
             color: 'turqoise', brand: "Adidas", price: 780, size: 4, in_stock: 5,img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5Y8gE-RkbjN2ZUYn1aMf4Y21dMcsH3QJv-6XRqsDH5Ivm63GzQ"
         },
         {
-            color: 'amber', brand: "Nike", price: 950, size: 3, in_stock: 4,img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5Y8gE-RkbjN2ZUYn1aMf4Y21dMcsH3QJv-6XRqsDH5Ivm63GzQ"
+            color: 'black', brand: "Nike", price: 950, size: 3, in_stock: 4,img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5Y8gE-RkbjN2ZUYn1aMf4Y21dMcsH3QJv-6XRqsDH5Ivm63GzQ"
         },
         {
             color: 'indigo', brand: "Soviet", price: 450, size: 2, in_stock: 3,img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY5Y8gE-RkbjN2ZUYn1aMf4Y21dMcsH3QJv-6XRqsDH5Ivm63GzQ"
@@ -75,7 +75,7 @@ function shoeCatalogue() {
     };
 
     function searchForItems(params) {
-        console.log(params);
+   
 
         if(params.brand == "0" && params.color == "0" && params.size == "0"){
             return getShoes
@@ -86,7 +86,7 @@ function shoeCatalogue() {
         for (let i = 0; i < shoes.length; i++) {
             var shoe = shoes[i];
 
-            if (shoe.brand.toLowerCase() == params.brand.toLowerCase()) {
+            if (shoe.brand.toLowerCase() == params.brand.toLowerCase() && shoe.color == params.color && shoe.size == params.size) {
                list.push(shoe) 
             }
             
